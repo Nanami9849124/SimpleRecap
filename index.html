@@ -12,53 +12,49 @@
             padding: 0;
             background: url('your-image-url.jpg') no-repeat center center fixed; 
             background-size: cover; /* Resize the background image to cover the entire container */
-            color: gold; /* Default text color */
+            text-align: center; /* Center text */
+            color: gold;
         }
-        header {
-            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-            color: red; /* Header text color */
-            text-align: center;
-            padding: 1em 0;
-        }
-        header h1 {
-            color: gold; /* Header title color */
-        }
-        .main-content, .news-section {
-            margin: 1em 5%;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+        header, .main-content, .news-section, footer {
+            background-color: transparent; /* Transparent background */
             padding: 1em;
-            color: black; /* Main content text color */
         }
-        .news-section h2, .news-section p {
-            color: red; /* News section text color */
+        .gold-gradient-text {
+            background: -webkit-linear-gradient(lightgold, darkgold); /* Gradient text color */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        footer {
-            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-            color: gold; /* Footer text color */
-            text-align: center;
-            padding: 1em 0;
+        .icon {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            background-image: url('your-icon-url.jpg'); /* Replace with your icon URL */
+            background-size: cover;
+            border: 2px solid gold; /* Gold border */
+            display: block;
+            margin: 0 auto 1em; /* Center icon */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>ASimpleRecap</h1>
-        <p>A compiled narrative of the news you need to know for gaming, tech and world news</p>
+        <div class="icon"></div> <!-- Icon placeholder -->
+        <h1 class="gold-gradient-text">ASimpleRecap</h1>
+        <p class="gold-gradient-text">A compiled narrative of the news you need to know for gaming, tech and world news</p>
     </header>
 
     <div class="main-content">
-        <h2>Latest Episodes</h2>
+        <h2 class="gold-gradient-text">Latest Episodes</h2>
         <!-- Embed your latest podcast episodes here -->
     </div>
 
     <div class="news-section">
-        <h2>Gaming News</h2>
+        <h2 class="gold-gradient-text">Gaming News</h2>
         <!-- Add your gaming news content here -->
-        <p>Arena Released onto the PBE</p>
+        <p class="gold-gradient-text">Arena Released onto the PBE</p>
     </div>
 
     <footer>
-        <p>&copy; 2023 ASimpleRecap</p>
+        <p class="gold-gradient-text">&copy; 2023 ASimpleRecap</p>
     </footer>
 </body>
 </html>
