@@ -3,58 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASimpleRecap</title>
-    <style>
-        /* Add your CSS styling here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('your-image-url.jpg') no-repeat center center fixed; 
-            background-size: cover; /* Resize the background image to cover the entire container */
-            text-align: center; /* Center text */
-            color: gold;
-        }
-        header, .main-content, .news-section, footer {
-            background-color: transparent; /* Transparent background */
-            padding: 1em;
-        }
-        .gold-gradient-text {
-            background: -webkit-linear-gradient(lightgold, darkgold); /* Gradient text color */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .icon {
-            width: 50px; /* Adjust size as needed */
-            height: 50px; /* Adjust size as needed */
-            background-image: url('your-icon-url.jpg'); /* Replace with your icon URL */
-            background-size: cover;
-            border: 2px solid gold; /* Gold border */
-            display: block;
-            margin: 0 auto 1em; /* Center icon */
-        }
-    </style>
+    <title>Team Captain Win Rates</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="icon"></div> <!-- Icon placeholder -->
-        <h1 class="gold-gradient-text">ASimpleRecap</h1>
-        <p class="gold-gradient-text">A compiled narrative of the news you need to know for gaming, tech and world news</p>
-    </header>
+    <div class="container">
+        <h1>Team Captain Win Rates</h1>
+        <div class="form-container">
+            <form id="data-entry-form">
+                <label for="team-captain">Team Captain:</label>
+                <select id="team-captain" name="team-captain" required>
+                    <option value="">Select a captain</option>
+                    <option value="Tom">Tom</option>
+                    <option value="Tristan">Tristan</option>
+                    <option value="James">James</option>
+                    <option value="Harry">Harry</option>
+                    <option value="Will">Will</option>
+                    <option value="David">David</option>
+                    <option value="Jack">Jack</option>
+                    <option value="Ollie">Ollie</option>
+                    <option value="Fluke">Fluke</option>
+                    <option value="Lawrence">Lawrence</option>
+                </select>
 
-    <div class="main-content">
-        <h2 class="gold-gradient-text">Latest Episodes</h2>
-        <!-- Embed your latest podcast episodes here -->
+                <label for="player1">Player 1:</label>
+                <select id="player1" name="player1" required>
+                    <option value="">Select a player</option>
+                    <option value="Tom">Tom</option>
+                    <option value="Tristan">Tristan</option>
+                    <option value="James">James</option>
+                    <option value="Harry">Harry</option>
+                    <option value="Will">Will</option>
+                    <option value="David">David</option>
+                    <option value="Jack">Jack</option>
+                    <option value="Ollie">Ollie</option>
+                    <option value="Fluke">Fluke</option>
+                    <option value="Lawrence">Lawrence</option>
+                </select>
+
+                <label for="player2">Player 2:</label>
+                <select id="player2" name="player2" required>
+                    <option value="">Select a player</option>
+                    <option value="Tom">Tom</option>
+                    <option value="Tristan">Tristan</option>
+                    <option value="James">James</option>
+                    <option value="Harry">Harry</option>
+                    <option value="Will">Will</option>
+                    <option value="David">David</option>
+                    <option value="Jack">Jack</option>
+                    <option value="Ollie">Ollie</option>
+                    <option value="Fluke">Fluke</option>
+                    <option value="Lawrence">Lawrence</option>
+                </select>
+
+                <label for="player3">Player 3:</label>
+                <select id="player3" name="player3" required>
+                    <option value="">Select a player</option>
+                    <option value="Tom">Tom</option>
+                    <option value="Tristan">Tristan</option>
+                    <option value="James">James</option>
+                    <option value="Harry">Harry</option>
+                    <option value="Will">Will</option>
+                    <option value="David">David</option>
+                    <option value="Jack">Jack</option>
+                    <option value="Ollie">Ollie</option>
+                    <option value="Fluke">Fluke</option>
+                    <option value="Lawrence">Lawrence</option>
+                </select>
+
+                <label for="player4">Player 4:</label>
+                <select id="player4" name="player4" required>
+                    <option value="">Select a player</option>
+                    <option value="Tom">Tom</option>
+                    <option value="Tristan">Tristan</option>
+                    <option value="James">James</option>
+                    <option value="Harry">Harry</option>
+                    <option value="Will">Will</option>
+                    <option value="David">David</option>
+                    <option value="Jack">Jack</option>
+                    <option value="Ollie">Ollie</option>
+                    <option value="Fluke">Fluke</option>
+                    <option value="Lawrence">Lawrence</option>
+                </select>
+
+                <label for="player5">Player 5:</label>
+                <select id="player5" name="player5" required>
+                    <option value="">Select a player</option>
+                    <option value="Tom">Tom</option>
+                    <option value="Tristan">Tristan</option>
+                    <option value="James">James</option>
+                    <option value="Harry">Harry</option>
+                    <option value="Will">Will</option>
+                    <option value="David">David</option>
+                    <option value="Jack">Jack</option>
+                    <option value="Ollie">Ollie</option>
+                    <option value="Fluke">Fluke</option>
+                    <option value="Lawrence">Lawrence</option>
+                </select>
+
+                <label for="win-loss">W/L:</label>
+                <select id="win-loss" name="win-loss" required>
+                    <option value="">Select result</option>
+                    <option value="Win">Win</option>
+                    <option value="Loss">Loss</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h2>Team Captain Win Rates</h2>
+            <table id="win-rates-table">
+                <thead>
+                    <tr>
+                        <th>Team Captain</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be added dynamically here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="match-history-container">
+            <h2>Match History</h2>
+            <label for="select-captain">Select Team Captain:</label>
+            <select id="select-captain">
+                <option value="">Select a captain</option>
+                <option value="Tom">Tom</option>
+                <option value="Tristan">Tristan</option>
+                <option value="James">James</option>
+                <option value="Harry">Harry</option>
+                <option value="Will">Will</option>
+                <option value="David">David</option>
+                <option value="Jack">Jack</option>
+                <option value="Ollie">Ollie</option>
+                <option value="Fluke">Fluke</option>
+                <option value="Lawrence">Lawrence</option>
+            </select>
+            <button id="view-matches">View Matches</button>
+            <table id="match-history-table">
+                <thead>
+                    <tr>
+                        <th>Team Captain</th>
+                        <th>Players</th>
+                        <th>W/L</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be added dynamically here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="player-stats-container">
+            <h2>Player Win Rates</h2>
+            <label for="select-player">Select Player:</label>
+            <select id="select-player">
+                <option value="">Select a player</option>
+                <option value="Tom">Tom</option>
+                <option value="Tristan">Tristan</option>
+                <option value="James">James</option>
+                <option value="Harry">Harry</option>
+                <option value="Will">Will</option>
+                <option value="David">David</option>
+                <option value="Jack">Jack</option>
+                <option value="Ollie">Ollie</option>
+                <option value="Fluke">Fluke</option>
+                <option value="Lawrence">Lawrence</option>
+            </select>
+            <button id="view-player-stats">View Player Stats</button>
+            <table id="player-stats-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Win Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be added dynamically here -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
-    <div class="news-section">
-        <h2 class="gold-gradient-text">Gaming News</h2>
-        <!-- Add your gaming news content here -->
-        <p class="gold-gradient-text">Arena Released onto the PBE</p>
-    </div>
-
-    <footer>
-        <p class="gold-gradient-text">&copy; 2023 ASimpleRecap</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
